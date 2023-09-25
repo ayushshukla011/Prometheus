@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link,useNavigate} from "react-router-dom";
 // import { useLocation } from 'react-router-dom';
-// require('./navbar.css');
+import './Navbar.css';
 
 const Navbar = () => {
 
@@ -50,18 +50,17 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                            <div className="flex flex-shrink-0 items-center">
-                                <img className="h-8 w-auto" src={require('./qr-svgrepo-com.svg').default} alt="AgroBOT" />
+                            <div className="logo h-11 w-11 flex flex-shrink-0 items-center justify-center">
+                                <img className="h-10 w-auto" src="https://cdn0.iconfinder.com/data/icons/transport-technology/100/Transport_technology011111-20-512.png" alt="vehicle-qr" />
                             </div>
                             <div className="hidden sm:ml-6 sm:block">
                                 <div className="flex space-x-4">
                                     {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */ }
 
-                                    <Link to="/" className={`bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page`}>Home</Link>
-                                    <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Generate-QR</Link>
+                                    <Link to="/" className={`bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium " hover:no-underline  aria-current="page`}>Home</Link>
+                                    <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:no-underline">Generate QR</Link>
+                                    <Link to="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:no-underline">About Us</Link>
                                     
-
-                                   
 
                                 </div>
                             </div>
@@ -101,13 +100,13 @@ const Navbar = () => {
                         <div className=" space-x-4">
           <Link
             to="/signup"
-            className="bg-green-500 text-white font-semibold px-4 py-2 rounded hover:bg-green-600 transition duration-300"
+            className="bg-red-400 text-white font-semibold px-4 py-2 rounded hover:bg-red-500 hover:no-underline transition duration-300"
           >
             Sign Up
           </Link>
           <Link
             to="/login"
-            className="bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+            className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-500 hover:no-underline transition duration-300"
           >
             Login
           </Link>

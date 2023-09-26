@@ -2,6 +2,7 @@ import React from 'react'
 import {Link,useNavigate} from "react-router-dom";
 // import { useLocation } from 'react-router-dom';
 import './Navbar.css';
+import { signInWithGoogleRedirect,signUserAccountOut} from "../../firebase";
 
 const Navbar = () => {
 
@@ -16,11 +17,30 @@ const Navbar = () => {
     }
     let navigate=useNavigate();
 
-    const handlesignout=()=>{
-        localStorage.removeItem('token');
-        navigate('/');
-    }
+    
 
+    const handlesignout= async ()=>{
+        await signUserAccountOut();
+        localStorage.clear();
+        navigate("/");
+        
+    }
+    
+   
+    const signInWithGoogle = async () => {
+      const response = await signInWithGoogleRedirect();
+      if (response) {
+        localStorage.setItem("isAuth",true);
+        console.log(localStorage.getItem("isAuth"));
+        
+        navigate("/");
+      }
+   
+    };
+    const singinhandle = () => {
+        signInWithGoogle();
+        localStorage.setItem("isAuth",true);
+      };
     return (
         <div>
             <nav className="bg-gray-800 sticky" id='navbar'>
@@ -66,7 +86,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         {/* user info */}
-                        {localStorage.getItem('token')?<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        {localStorage.getItem('isAuth')?<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                           
                             <button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span className="absolute -inset-1.5"></span>
@@ -98,18 +118,20 @@ const Navbar = () => {
                         :
 
                         <div className=" space-x-4">
-          <Link
+          {/* <Link
             to="/signup"
             className="bg-red-400 text-white font-semibold px-4 py-2 rounded hover:bg-red-500 hover:no-underline transition duration-300"
           >
             Sign Up
-          </Link>
-          <Link
-            to="/login"
-            className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-500 hover:no-underline transition duration-300"
+          </Link> */}
+          <button
+            onClick={singinhandle}
+            
+            className=" bg-red-400 text-black font-semibold px-4 py-2 rounded hover:bg-gray-500 hover:no-underline transition duration-300"
           >
             Login
-          </Link>
+            
+          </button>
         </div>
         }
                     </div>
@@ -121,6 +143,7 @@ const Navbar = () => {
 
                         <Link to="/" className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</Link>
                         <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Generate-Qr</Link>
+                        <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About us</Link>
                        
                     </div>
                 </div>

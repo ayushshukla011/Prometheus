@@ -117,7 +117,7 @@ const Navbar = () => {
                         </div>
                         :
 
-                        <div className=" space-x-4">
+                        <div className=" space-x-4 ">
           {/* <Link
             to="/signup"
             className="bg-red-400 text-white font-semibold px-4 py-2 rounded hover:bg-red-500 hover:no-underline transition duration-300"
@@ -127,7 +127,7 @@ const Navbar = () => {
           <button
             onClick={singinhandle}
             
-            className=" bg-red-400 text-black font-semibold px-4 py-2 rounded hover:bg-gray-500 hover:no-underline transition duration-300"
+            className=" bg-red-400  text-black font-semibold px-4 py-2 rounded hover:bg-white hover:no-underline transition duration-300"
           >
             Login
             

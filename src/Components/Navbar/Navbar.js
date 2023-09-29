@@ -37,7 +37,7 @@ const Navbar = () => {
       }
    
     };
-    const singinhandle = () => {
+    const signinhandle = () => {
         signInWithGoogle();
         localStorage.setItem("isAuth",true);
       };
@@ -125,9 +125,8 @@ const Navbar = () => {
             Sign Up
           </Link> */}
           <button
-            onClick={singinhandle}
-            
-            className=" bg-red-400  text-black font-semibold px-4 py-2 rounded hover:bg-white hover:no-underline transition duration-300"
+            onClick={signinhandle}
+            className="bg-red-400 text-black font-semibold px-4 py-2 rounded hover:bg-white hover:no-underline transition duration-300"
           >
             Login
             

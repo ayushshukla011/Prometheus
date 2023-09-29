@@ -1,4 +1,5 @@
 import React from 'react'
+import './Qr_page.css'
 import Button from 'react-bootstrap/Button';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
@@ -7,10 +8,10 @@ const Qrpage = () => {
   return (
     <div className='section'>
       <h2 className='my-7 text-center font-semibold text-4xl'>Fill your Vehicle details</h2>
-      <div className='form1 flex flex-row justify-center items-center px-10 w-screen'>
-        <div className="leftSection mx-5 w-96 flex items-center justify-center">
-          <Form className=' w-80'>
-            <Form.Select className="border-slate-50 mb-3" aria-label="Vehicle Make">
+      <div className='form1 flex justify-center items-center px-10 w-screen'>
+        <div className="leftSection mx-20 w-screen flex items-center justify-center">
+          <Form className='w-80'>
+            <Form.Select className="border-slate-50 mb-3 mr-9" aria-label="Vehicle Make">
               <option>Select Make</option>
               <option value="1">Maruti Suzuki</option>
               <option value="2">Hyundai</option>
@@ -19,7 +20,7 @@ const Qrpage = () => {
               <option value="5">Honda</option>
               <option value="6">Toyota</option>
               <option value="7">Ford</option>
-            </Form.Select><br></br>
+            </Form.Select>
             <Form.Select className="mb-3" aria-label="Vehicle Make">
               <option>Select Model</option>
               <option value="1">Alto K10</option>
@@ -66,9 +67,7 @@ const Qrpage = () => {
             </Button>
           </Form>
         </div>
-        <div className="rightSection h-96 w-96">
-          <img src="https://linky.se/wp-content/uploads/2022/11/p2p-1.svg" alt="vehicle" />
-        </div>
+        
       </div>
     </div>
   )

@@ -3,7 +3,6 @@ import qr from '../../assets/qr.png'
 import {
     EmailShareButton,
     FacebookShareButton,
-    InstagramShareButton,
     LinkedinShareButton,
     TelegramShareButton,
     TwitterShareButton,

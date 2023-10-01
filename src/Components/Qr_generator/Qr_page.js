@@ -63,7 +63,7 @@ const Qrpage = () => {
               <Form.Control type="file" accept='image/*' />
             </Form.Group>
             <Button className="bg-red-400 w-36 my-4" variant="danger" type="submit">
-              Generate QR
+              Upload Details
             </Button>
           </Form>
         </div>

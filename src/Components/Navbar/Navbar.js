@@ -37,7 +37,7 @@ const Navbar = () => {
       }
    
     };
-    const singinhandle = () => {
+    const signinhandle = () => {
         signInWithGoogle();
         localStorage.setItem("isAuth",true);
       };
@@ -78,7 +78,7 @@ const Navbar = () => {
                                     {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */ }
 
                                     <Link to="/" className={`bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium " hover:no-underline  aria-current="page`}>Home</Link>
-                                    <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:no-underline">Generate QR</Link>
+                                    <Link to="/Qr" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:no-underline">Upload Details</Link>
                                     <Link to="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:no-underline">About Us</Link>
                                     
 
@@ -109,8 +109,8 @@ const Navbar = () => {
                               
                                 <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" id='profile' aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                                    
-                                    <a href="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                                    <a href="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                                    <a href="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">My Profile</a>
+                                    <a href="/" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">My Vehicles</a>
                                     <button  className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2" onClick={handlesignout}>Sign out</button>
                                 </div>
                             </div>
@@ -125,9 +125,8 @@ const Navbar = () => {
             Sign Up
           </Link> */}
           <button
-            onClick={singinhandle}
-            
-            className=" bg-red-400  text-black font-semibold px-4 py-2 rounded hover:bg-white hover:no-underline transition duration-300"
+            onClick={signinhandle}
+            className="bg-red-400 text-black font-semibold px-4 py-2 rounded hover:bg-white hover:no-underline transition duration-300"
           >
             Login
             

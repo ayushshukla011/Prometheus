@@ -3,7 +3,6 @@ import qr from '../../assets/qr.png'
 import {
     EmailShareButton,
     FacebookShareButton,
-    InstagramShareButton,
     LinkedinShareButton,
     TelegramShareButton,
     TwitterShareButton,
@@ -21,6 +20,7 @@ const Qrshow = () => {
     return (
         <div className='section'>
             <h2 className='text-center my-10 text-4xl'>Here you GO!</h2>
+            <h5 className='text-center text-xl'>Share this QR</h5>
             <div className="items-center justify-center flex img-qr">
                 <img className="h-60 w-60 " src={qr} alt="qr" />
             </div>

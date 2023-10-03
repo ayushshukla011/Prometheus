@@ -1,9 +1,9 @@
 .section{
     font-family: 'Poppins', sans-serif;
+    font-weight:bold;
 }
 .leftSection{
-    width: 50%;
-}
-.rightSection{
-    width: 50%;
+    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url('https://linky.se/wp-content/uploads/2022/11/p2p-1.svg');
+    background-repeat: no-repeat;
 }

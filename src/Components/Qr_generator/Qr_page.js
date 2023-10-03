@@ -81,9 +81,7 @@ const Qrpage = () => {
             </Button>
           </Form>
         </div>
-        <div className="rightSection h-96 w-96">
-          <img src="https://linky.se/wp-content/uploads/2022/11/p2p-1.svg" alt="vehicle" />
-        </div>
+        
       </div>
     </div>
   )
